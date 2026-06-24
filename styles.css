@@ -77,9 +77,9 @@ li {
     list-style-type: none;
 }
 
-.nav__links {
+/* .nav__links {
 
-}
+} */
 
 .nav__link {
     margin-left: 16px;
@@ -244,9 +244,9 @@ LANDING - SECTIONS
     align-items: center;
 }
 
-.section__title {
+/* .section__title {
 
-}
+} */
 
 /* 
 
@@ -280,6 +280,7 @@ plat features
 
 .feature__wrapper {
     display: flex;
+    flex-wrap: wrap;
 }
 .feature {
     padding: 0 24px;
@@ -414,11 +415,43 @@ footer {
     padding: 0 8px;
 }
 
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
+    .header__desc {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .book {
+        width: 50%;
+    }
+}
+
+/* PHONES */
 @media (max-width: 550px) {
     .nav__links {
         display: none;
     }
     .btn__menu {
         display: block;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .feature:not(:last-child) {
+        margin-bottom: 24px;
     }
 }
