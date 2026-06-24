@@ -9,6 +9,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+p {
+    line-height: 1.5;
+}
+
 .text--purple {
     color: #7342d6;
 }
@@ -21,7 +25,9 @@ button:active {
     transform: translateY(1px);
 }
 
-/* Landing page - Nav/Header */
+/* 
+Landing page - NAV/HEADER 
+*/
 
 #landing {
     background-color: rgba(115, 66, 214, 0.1);
@@ -133,3 +139,65 @@ img {
     max-height: 50vh;
     padding: 20px;
 }
+
+/*
+
+LANDING - SECTIONS
+
+*/
+
+.container {
+    padding: 56px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section__title {
+
+}
+
+/* 
+
+plat features
+
+*/
+#features {
+
+}
+.feature__wrapper {
+    display: flex;
+}
+.feature {
+    padding: 0 24px;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.feature__img {
+    border: 2px solid #7342d65d;
+    color: #7342d6;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+.feature__subtitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.feature__para{
+    text-align: center;
+}
+/* promoted books */
+
+/* recent books */
