@@ -1,7 +1,50 @@
-function renderBooks() {
+function renderBooks(filter) {
+  const booksWrapper = document.querySelector(".books");
 
+  const books = getBooks();
+
+  if (filter === "LOW_TO_HIGH") {
+    books.sort((a, b) => parseFloat(a.originalPrice) - parseFloat(b.originalPrice))
+  }
+  else if (filter === "HIGH__TO__LOW") {
+    books.sort((a, b) => parseFloat(b.originalPrice) -  parseFloat(a.originalPrice))
+  }
+  else if (filter === "RATING") {
+    books.sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating))
+  }
+
+  const booksHtml = books.map((book) => {
+    return `<div class="book">
+    <figure class="book__img--wrapper">
+      <img class="book__img" src="${book.url}" alt="">
+    </figure>
+    <div class="book__title">
+      ${book.title}
+    </div>
+    <div class="book__ratings">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    <div class="book__price">
+      <span class="book__price--normal">$${book.originalPrice.toFixed(2)}</span>
+    </div>
+  </div>`;
+  })
+  .join("");
+
+  booksWrapper.innerHTML = booksHtml
 }
 
+function filterBooks(event) {
+  renderBooks(event.target.value);
+}
+
+setTimeout(() => {
+  renderBooks();
+});
 
 // FAKE DATA
 function getBooks() {
