@@ -157,6 +157,8 @@ li {
     font-size: 40px;
     color: white;
 }
+
+
 /*
 
 Header/Landing
@@ -244,9 +246,6 @@ LANDING - SECTIONS
     align-items: center;
 }
 
-/* .section__title {
-
-} */
 
 /* 
 
@@ -310,6 +309,8 @@ plat features
     text-align: center;
     max-width: 280px;
 }
+
+
 /* 
 
 promoted books 
@@ -381,6 +382,16 @@ promoted books
     transform: translateY(-100%);
 }
 
+.books__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.books__header h2 {
+    margin: 0;
+}
+
 /*
 
 explore
@@ -389,6 +400,9 @@ explore
 #explore {
     background-color: rgba(115, 66, 214, 0.1);
 }
+
+
+
 
 /****************
 *     FOOTER    *
@@ -415,7 +429,9 @@ footer {
     padding: 0 8px;
 }
 
-/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+
+
+/* SMALL SCREENS, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
     .header__desc {
         padding: 0 24px;

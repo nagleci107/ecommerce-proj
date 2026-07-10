@@ -176,7 +176,21 @@ Library has books in all of your favorite categories                            
         <section id="latest">
             <div class="container">
                 <div class="row">
-                    <h2 class="section__title">Latest <span class="text--purple">Books</span></h2>
+                    <div class="books__header">
+                        <h2 class="section__title">
+                            Latest <span class="text--purple">Books</span>
+                        </h2>
+                        <select name="filter">
+                            <option value="" disabled selected>Sort</option>
+                            <option value="LOW_TO_HIGH">
+                                Price, Low to High</option>
+                            <option value="HIGH_TO_LOW">
+                                Price, High to Low</option>
+                            <option value="RATING">
+                                Rating, High to Low</option>
+                        </select>
+                    </div>
+                    
                     <div class="books">
                         <div class="book">
                             <figure class="book__img--wrapper">
