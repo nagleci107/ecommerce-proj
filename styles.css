@@ -45,6 +45,13 @@ button:active {
     cursor: not-allowed;
 }
 
+.book__rating,
+.fa-star,
+.fa-star-half-stroke {
+ margin-bottom: 8px;
+ color: #fabf2a;
+}
+
 /* 
 
 NAV 
@@ -351,12 +358,7 @@ promoted books
 .book__title:hover {
     text-decoration: underline;
 }
-.book__rating,
-.fa-star,
-.fa-star-half-stroke {
- margin-bottom: 8px;
- color: #fabf2a;
-}
+
 .book__price--normal {
     text-decoration: line-through;
     padding-right: 6px;
@@ -473,6 +475,14 @@ select {
   padding-top: 60px;
   font-size: 60px;
   color: #7342d6;
+}
+
+.books__loading--spinner {
+    display: none !important;
+}
+
+.books__loading .books__loading--spinner {
+    display: block !important;
 }
 
 .fa-spinner {
