@@ -4,13 +4,13 @@ function renderBooks(filter) {
   const books = getBooks();
 
   if (filter === "LOW_TO_HIGH") {
-    books.sort((a, b) => parseFloat(a.originalPrice) - parseFloat(b.originalPrice));
+    books.sort((a, b) => a.originalPrice - b.originalPrice);
   }
   else if (filter === "HIGH__TO__LOW") {
-    books.sort((a, b) => parseFloat(b.originalPrice) -  parseFloat(a.originalPrice));
+    books.sort((a, b) => b.originalPrice - a.originalPrice);
   }
   else if (filter === "RATING") {
-    books.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+    books.sort((a, b) => b.rating - a.rating);
   }
 
  
