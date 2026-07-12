@@ -10,7 +10,7 @@ function renderBooks(filter) {
     books.sort((a, b) => parseFloat(b.originalPrice) -  parseFloat(a.originalPrice));
   }
   else if (filter === "RATING") {
-    books.sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating));
+    books.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
   }
 
  
