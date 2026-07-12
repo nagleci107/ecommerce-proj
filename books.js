@@ -4,14 +4,16 @@ function renderBooks(filter) {
   const books = getBooks();
 
   if (filter === "LOW_TO_HIGH") {
-    books.sort((a, b) => parseFloat(a.originalPrice) - parseFloat(b.originalPrice))
+    books.sort((a, b) => parseFloat(a.originalPrice) - parseFloat(b.originalPrice));
   }
   else if (filter === "HIGH__TO__LOW") {
-    books.sort((a, b) => parseFloat(b.originalPrice) -  parseFloat(a.originalPrice))
+    books.sort((a, b) => parseFloat(b.originalPrice) -  parseFloat(a.originalPrice));
   }
   else if (filter === "RATING") {
-    books.sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating))
+    books.sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating));
   }
+
+ 
 
   const booksHtml = books.map((book) => {
     return `<div class="book">
@@ -22,11 +24,7 @@ function renderBooks(filter) {
       ${book.title}
     </div>
     <div class="book__ratings">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i>
+      ${ratingsHTML(book.rating)}
     </div>
     <div class="book__price">
       <span class="book__price--normal">$${book.originalPrice.toFixed(2)}</span>
@@ -36,6 +34,17 @@ function renderBooks(filter) {
   .join("");
 
   booksWrapper.innerHTML = booksHtml
+}
+
+function ratingsHTML(rating) {
+   let ratingHTML = "";
+  for (let i = 0; i < Math.floor(rating); ++i) {
+    ratingHTML += '<i class="fas fa-star"></i>\n'
+  }
+  if (!Number.isInteger(rating)) {
+    ratingHTML += '<i class="fas fa-star-half-stroke"></i>\n'
+  }
+  return ratingHTML;
 }
 
 function filterBooks(event) {
